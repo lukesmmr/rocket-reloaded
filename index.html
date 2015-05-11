@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Pintsize</title>
+	<title>Rocket Reloaded</title>
 	<meta name="description">
 
 	<!--Mobile Meta-->
@@ -28,10 +28,38 @@
 	<div class="container">
 		
 		<div class="row">
-			
-			<div class="col w-6">
-				
-				<p>Your project here</p>
+            <header id="header">
+                <nav class="col w-12">
+                    <ul>
+                        <li><a href="index.html" title="">Home</a></li>
+                        <li><a href="calendar.html" title="">Calendar</a></li>
+                    </ul>
+                </nav> 
+            </header><!-- /header -->
+
+			<div class="main col w-12">
+
+
+            <h1>Welcome to the Michelberger Hotel.</h1>
+
+            <section id="info-getting-here" class="main-section clearfix">
+              <div class="two-up">
+                <h2>Getting here</h2>
+                <p>
+                  Michelberger Hotel<br>
+                  Warschauer Str. 39/40<br>
+                  10243 Berlin
+                </p>
+                <p>
+                  Telefon: +49 302977859-0<br>
+                  Telefax: +49 302977859-29
+                </p>
+                <p>
+                    <a href="mailto:reservations@michelbergerhotel.com">Contact us by email</a><br />
+                    <a href="https://www.google.com/maps/place/Michelberger+Hotel/" target="_blank">Find us on Google Maps</a>
+                </p>
+            </section>
+
 
 			</div>
 
@@ -39,30 +67,17 @@
 
 </div>
 
+<div id="rocket">
+    
+</div>
 
 
 
 	<script src="js/vendor/modernizr.custom.min.js"></script>
  	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        (function(b, o, i, l, e, r) {
-            b.GoogleAnalyticsObject = l;
-            b[l] || (b[l] =
-                function() {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
-            b[l].l = +new Date;
-            e = o.createElement(i);
-            r = o.getElementsByTagName(i)[0];
-            e.src = '//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e, r)
-        }(window, document, 'script', 'ga'));
-        ga('create', 'UA-XXXXX-X', 'auto');
-        ga('send', 'pageview');
-    </script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
