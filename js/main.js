@@ -1,9 +1,8 @@
-
-/*-------------------------------------------------------*\
-    Main
-/*-------------------------------------------------------*/
-
 $(document).ready(function(){
+
+	if (Modernizr.flash) {
+		embedRocket();
+	}
 
 	if (Modernizr.history) {
 
@@ -44,8 +43,9 @@ function loadContent(url) {
 	});
 }
 
-// flash embed
-var params = {wmode: "transparent",scale: "noscale", quality: "low"}
-var attributes = {id: "rocket"}
-var rocket = document.getElementById("rocket");
-swfobject.embedSWF("flash/preloader.swf", rocket, "100%", "100%", 10, "", "", params, attributes);
+function embedRocket() {
+	var params = {wmode: "transparent",scale: "noscale", quality: "low"}
+	var attributes = {id: "rocket"}
+	var rocket = document.getElementById("rocket");
+	swfobject.embedSWF("flash/preloader.swf", rocket, "100%", "100%", 10, "", "", params, attributes);	
+}

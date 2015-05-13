@@ -60,6 +60,12 @@ h2 {margin-top: 10px;}
 .container {
 	margin-bottom: 100px;
 }
+
+.no-flash, .no-js {
+	.plugin-warning {
+		display: none;
+	}
+}
 #rocket {
 	position: fixed;
 	width: 100%; 
