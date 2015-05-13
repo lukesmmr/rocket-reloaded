@@ -660,48 +660,48 @@ var SWFAddress = new function() {
         _silent = TRUE;
         _update.call(SWFAddress, true);
         _stack[_h.length] = _value;
-        if (_safari) {
-            if (_opts.history) {
-                _l[ID][_l.pathname] = _stack.toString();
-                _length = _h.length + 1;
-                if (_version < 418) {
-                    if (_l.search == "") {
-                        _form.action = "#" + _value;
-                        _form.submit()
-                    }
-                } else {
-                    if (_version < 523 || _value == "") {
-                        var evt = _d.createEvent("MouseEvents");
-                        evt.initEvent("click", TRUE, TRUE);
-                        var anchor = _d.createElement("a");
-                        anchor.href = "#" + _value;
-                        anchor.dispatchEvent(evt)
-                    } else {
-                        _l.hash = "#" + _value
-                    }
-                }
-            } else {
-                _l.replace("#" + _value)
-            }
-        } else {
-            if (_value != _getHash()) {
-                if (_opts.history) {
-                    _l.hash = "#" + _dc(_ieLocal(_value, TRUE))
-                } else {
-                    _l.replace("#" + _dc(_value))
-                }
-            }
-        }
-        if ((_msie && _version < 8) && _opts.history) {
-            _st(_htmlWrite, 50)
-        }
-        if (_safari) {
-            _st(function() {
-                _silent = FALSE
-            }, 1)
-        } else {
-            _silent = FALSE
-        }
+        // if (_safari) {
+        //     if (_opts.history) {
+        //         _l[ID][_l.pathname] = _stack.toString();
+        //         _length = _h.length + 1;
+        //         if (_version < 418) {
+        //             if (_l.search == "") {
+        //                 _form.action = "#" + _value;
+        //                 _form.submit()
+        //             }
+        //         } else {
+        //             if (_version < 523 || _value == "") {
+        //                 var evt = _d.createEvent("MouseEvents");
+        //                 evt.initEvent("click", TRUE, TRUE);
+        //                 var anchor = _d.createElement("a");
+        //                 anchor.href = "#" + _value;
+        //                 anchor.dispatchEvent(evt)
+        //             } else {
+        //                 _l.hash = "#" + _value
+        //             }
+        //         }
+        //     } else {
+        //         _l.replace("#" + _value)
+        //     }
+        // } else {
+        //     if (_value != _getHash()) {
+        //         if (_opts.history) {
+        //             _l.hash = "#" + _dc(_ieLocal(_value, TRUE))
+        //         } else {
+        //             _l.replace("#" + _dc(_value))
+        //         }
+        //     }
+        // }
+        // if ((_msie && _version < 8) && _opts.history) {
+        //     _st(_htmlWrite, 50)
+        // }
+        // if (_safari) {
+        //     _st(function() {
+        //         _silent = FALSE
+        //     }, 1)
+        // } else {
+        //     _silent = FALSE
+        // }
     };
     this.getPath = function() {
         var value = this.getValue();

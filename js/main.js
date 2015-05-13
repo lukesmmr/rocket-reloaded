@@ -17,12 +17,23 @@ $(document).ready(function(){
 	    	loadContent(url);
 	    });
 
-		window.addEventListener("popstate", function() {
+	    // browser back - not working properly yet
+		window.addEventListener("popstate", function(e) {
 			var lastState = location.pathname;
 		    loadContent(lastState);
+		    talkToRocket(lastState.substring(0, lastState.length - 5).replace("/", ""))
 		});
 	}
+
+	$('nav a').on('click', function(){
+		talkToRocket( $(this).data('slug') );
+	});	
+
 });
+
+function talkToRocket(value) {
+	SWFAddress.setValue( value );
+}
 
 function loadContent(url) {
 	console.log('load content  ' + url)
@@ -33,7 +44,7 @@ function loadContent(url) {
 	});
 }
 
-// flash business
+// flash embed
 var params = {wmode: "transparent",scale: "noscale", quality: "low"}
 var attributes = {id: "rocket"}
 var rocket = document.getElementById("rocket");
